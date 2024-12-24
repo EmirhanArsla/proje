@@ -32,7 +32,7 @@ int main() {
   }
   // Eşleşme oranı 0 dan büyük ise bulunan kelime ile Eşlenme oranı yazdırılıyor.
   // 0 dan büyük değil ise ekrana Eslesme yok yazdırılıyor.
-  if (enfazla_uyusma>0) {
+  if (enfazla_uyusma>0.4) {
    printf("Bunu Demek Istediniz:%s  Benzerlik Orani:(%.2f) \n ",benzeyen_kelime,enfazla_uyusma);
   }
   else {
