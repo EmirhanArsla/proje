@@ -22,7 +22,7 @@ int main() {
  // İf koşulu sayesinde her bir karşılaştırmadan sonra kıyaslama yapılıyor.
  // Kıyaslama esnasında çok benzeyen kelime strcpy fonksiyonu ile benzeyen_kelime değişkenine aktarılıyor.
  // Ve similar_text fonksiyonunda dönen eşleşme değeri de enfazla_eslesme değişkenine aktarılıyor.
-  double enfazla_uyusma=0.0;
+  float enfazla_uyusma=0.0;
   for(int i=0;i<sayac;i++) {
    float uyusma = similar_text(kelime1,kelime2[i]);
    if (uyusma>enfazla_uyusma) {
@@ -58,16 +58,16 @@ float similar_text(char *words1, char *words2 ) {
   gecici=uzunluk1;
  }
  //Girilen 2 char karakter dizisinin harflerini , for döngüsü içerisinde karşılaştırıyor.
- // Eşleşen her harf için ayni_kelime değişkeni bir artıyor.
+ // Eşleşen her harf için ayni_harf değişkeni bir artıyor.
  // En son fonksiyon eşleşme oranına dönüyor.
- int ayni_kelime=0;
+ int ayni_harf=0;
  for(int i=0;i<gecici;i++) {
   if (words1[i] == words2[i]) {
-   ayni_kelime++;
+   ayni_harf++;
   }
  }
 
- return (float)ayni_kelime/uzunluk2;
+ return (float)ayni_harf/uzunluk2;
 }
 
 // Dosya işlemleri fonksiyonu
